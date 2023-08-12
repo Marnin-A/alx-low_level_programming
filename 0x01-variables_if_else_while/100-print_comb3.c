@@ -1,23 +1,32 @@
 #include <stdio.h>
 
+/**
+ * main - Entry point
+ * This program prints comma-separated
+ * combined digits
+ * Return: 0 (Success)
+ */
 int main(void)
 {
-	for (int i = 0; i <= 9; i++)
+	int i;
+	int j;
+
+	for (i = 48; i < 57; i++)
 	{
-		for (int j = i + 1; j <= 9; j++)
+		for (j = i + 1; j <= 57; j++)
 		{
-			if (i != 0 || j != 1)
+			putchar(i);
+			putchar(j);
+			if (i != 56)
 			{
-				putchar(i + '0');
-				putchar(j + '0');
-				if (i != 8 || j != 9)
-				{
-					putchar(',');
-					putchar(' ');
-				}
+				putchar(44);
+				putchar(32);
+			}
+			else
+			{
+				putchar(10);
 			}
 		}
 	}
 	return (0);
-}
 }
