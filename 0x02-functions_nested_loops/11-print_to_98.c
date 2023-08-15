@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_to_98 - Prints all natural
@@ -6,27 +7,18 @@
  * @n: the number to start counting from n to 98
  * Return: void
  */
-
-void print_to_98(int x)
+void print_to_98(int n)
 {
-	int i;
-
-	if (x < 98)
+	if (n < 98)
 	{
-		for (i = x; i < 99; i++)
-		{
-			_putchar(i);
-			_putchar(',');
-			_putchar(' ')
-		}
+		for (n = n; n < 98; n++)
+			printf("%d, ", n);
+		printf("%d\n", 98);
 	}
 	else
 	{
-		for (i = x; i > 97; i--)
-		{
-			_putchar(i);
-			_putchar(',');
-			_putchar(' ');
-		}
+		for (n = n; n > 98; n--)
+			printf("%d, ", n);
+		printf("%d\n", 98);
 	}
 }
