@@ -9,5 +9,12 @@
 
 int _strlen(char *s)
 {
-	return (sterlen(*s));
+	int i;
+
+	i = 0;
+	while (*(s + i) != 0)
+	{
+		i++;
+	}
+	return (i);
 }
