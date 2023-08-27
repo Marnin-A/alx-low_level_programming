@@ -1,22 +1,22 @@
 #include "main.h"
+
 /**
- * string_toupper - change lowercase to uppercase
- * @s:string
- * Return:char
+ * string_toupper - Changes all lowercase letters
+ * to their uppercase ASCII equivalents
+ * @c: Array of characters
+ *
+ * Return: CAPITALIZED string
  */
-char *string_toupper(char *s)
+char *string_toupper(char *c)
 {
+	char *ptr;
 
-	int i;
-
-	i = 0;
-	while (*(s + i))
+	ptr = c;
+	while (*c)
 	{
-		if (*(s + i) >= 'a' && *(s + i) <= 'z')
-		{
-			*(s + i) -= 'a' - 'A';
-			i++;
-		}
+		if (*c >= 97 && *c <= 122)
+			*c -= 32;
+		c++;
 	}
-	return (s);
+	return (ptr);
 }
