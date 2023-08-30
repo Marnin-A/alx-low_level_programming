@@ -8,30 +8,6 @@
  *
  * Return: the resulting square root
  */
-int _sqrt_recursive_helper(int n, int start, int end);
-
-/**
- * _sqrt_recursion - returns the natural square root of a number
- * @n: The number for which to find the square root
- *
- * Return: the resulting square root
- */
-
-int _sqrt_recursion(int n)
-{
-	if (n < 0)
-	{
-		return (-1);
-	}
-
-	if (n == 0 || n == 1)
-	{
-		return (n);
-	}
-
-	return (_sqrt_recursive_helper(n, 1, n));
-}
-
 int _sqrt_recursive_helper(int n, int start, int end)
 {
 	int mid = (start + end) / 2;
@@ -49,4 +25,26 @@ int _sqrt_recursive_helper(int n, int start, int end)
 	if (mid * mid > n)
 		return (_sqrt_recursive_helper(n, start, mid - 1));
 	return (_sqrt_recursive_helper(n, mid + 1, end));
+}
+
+/**
+ * _sqrt_recursion - returns the natural square root of a number
+ * @n: The number for which to find the square root
+ *
+ * Return: the resulting square root
+ */
+
+int _sqrt_recursion(int n)
+{
+        if (n < 0)
+        {
+                return (-1);
+        }
+
+        if (n == 0 || n == 1)
+        {
+                return (n);
+        }
+
+        return (_sqrt_recursive_helper(n, 1, n));
 }
