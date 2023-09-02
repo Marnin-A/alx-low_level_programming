@@ -7,8 +7,10 @@
 * @argv: Argument Vector
 * Return: 0 (Success)
 */
-int main(int argc, char *argv[])
+int main(int argc, char **argv[])
 {
+	(void)argv;
+
 	if (argc > 0)
 		printf("%s\n", argv[0]);
 	return (0);

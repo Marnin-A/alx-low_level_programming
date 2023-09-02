@@ -7,14 +7,15 @@
 * @argv: Argument Vector
 * Return: 0 (Success)
 */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; i < argc; i++)
+	while (argc)
 	{
-		printf("%d\n");
-		(*argv)++;
+		argc--;
+		printf("%s\n", argv[i]);
+		i++;
 	}
 	return (0);
 }
