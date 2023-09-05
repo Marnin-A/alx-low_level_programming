@@ -12,14 +12,14 @@
 
 char *argstostr(int ac, char **av)
 {
-	int i, len, k = 0;
+	int i, len, k, j = 0;
 	char *str, *s;
 	if (ac == 0 || av == NULL)
 		return (0);
 
 	for (i = 0; i < ac; i++)
 	{
-		*s = av[i];
+		s = av[i];
 		j =0;
 
 		while (s[j++] != '\0' )
