@@ -5,7 +5,6 @@
  * malloc_checked - cause normal process termination with a status value of 98
  *
  * @b: allocated memory
- * @i: pointer to the allocated memory
  *
  * Return: a pointer to the allocated memory
  */
