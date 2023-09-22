@@ -1,4 +1,4 @@
-#include "lists.h"
+#include "main.h"
 
 /**
  * add_node - function that adds a node at the begining of a list.
