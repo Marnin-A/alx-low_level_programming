@@ -1,4 +1,4 @@
-#include "main.h"
+#include "list.h"
 
 /**
  * add_node_end - function that adds a node at the end of a list.

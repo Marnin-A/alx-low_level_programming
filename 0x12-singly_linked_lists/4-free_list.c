@@ -1,4 +1,4 @@
-#include "main.h"
+#include "list.h"
 
 /**
  * free_list - free memory of all list.
