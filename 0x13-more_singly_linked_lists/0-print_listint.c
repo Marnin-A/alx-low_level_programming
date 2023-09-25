@@ -16,7 +16,7 @@ size_t print_listint(const listint_t *h)
 
 	for (i = 0; h != NULL; i++)
 	{
-		if (h->n == NULL)
+		if (!h->n)
 			printf("[0] (null)\n");
 		else
 			printf("%d \n", h->n);
